@@ -13,6 +13,7 @@
   "dependencies": {
     "events": "^3.3.0",
     "fs": "0.0.1-security",
+    "node-fetch": "^3.2.10",
     "prompt-sync": "^4.2.0"
   }
 }
