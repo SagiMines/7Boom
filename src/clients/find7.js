@@ -7,7 +7,3 @@ export const find7Check = number => {
   }
   return false;
 };
-
-export const find7Answer = number => {
-  find7Check(number) ? console.log('BOOM') : null;
-};
