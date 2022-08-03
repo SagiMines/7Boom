@@ -5,6 +5,6 @@ export const multiple7Check = number => {
   return false;
 };
 
-export const multuple7Answer = number => {
+export const multiple7Answer = number => {
   multiple7Check(number) ? console.log('BOOM') : null;
 };
