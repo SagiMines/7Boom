@@ -15,6 +15,10 @@ class NumberGenerator extends EventEmitter {
   getGenerator() {
     return this.generator;
   }
+
+  print() {
+    this.emit('boom');
+  }
 }
 
 export default NumberGenerator;

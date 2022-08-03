@@ -1,11 +1,11 @@
 import NumberGenerator from './publishers/numberGenerator';
 import { find7Check } from './clients/find7';
 import { multiple7Check } from './clients/multiple7';
+import { boomPrint } from './clients/boomPrint';
 
 export const start7BoomGame = (limit = 100, players) => {
   const numberGenerator = new NumberGenerator(limit);
-  numberGenerator.on('boom', printBoom);
-  numberGenerator.on('multiple7', multiple7Answer);
+  numberGenerator.on('boom', boomPrint);
   let value;
   const playersName = Object.keys(players);
   let counter = 0;
@@ -20,10 +20,12 @@ export const start7BoomGame = (limit = 100, players) => {
     }
     if (find7Check(value) || multiple7Check(value)) {
       console.log(`${playersName[counter]}:`);
-      numberGenerator.printNumber(value);
+      numberGenerator.print();
+      counter += 1;
     } else {
       console.log(`${playersName[counter]}:`);
       console.log(value);
+      counter += 1;
     }
   }, 1000);
 };
