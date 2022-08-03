@@ -9,7 +9,7 @@ do {
   counter += 1;
   console.log(`Hello ${counter}# player!`);
   const name = prompt('Please enter your name: ');
-  const age = Number(prompt('Please enter your age: '));
+  const age = prompt('Please enter your age: ');
   proceed = Number(
     prompt(
       'If your done (only after atleat 2 players) press 0. if you want to continue press 1.\n'
